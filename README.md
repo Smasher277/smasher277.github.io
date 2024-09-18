@@ -1,4 +1,4 @@
-My name is Josef Cordaro and my email address is none of the internet's business. ✨☺✨
+My name is Josef Cordaro and my email address is none of the internet's business. ✨😊✨
 
 This is a personal account for various things.
 
