@@ -1,7 +1,7 @@
 ```mermaid
 flowchart LR
     Start("Start Game")
-    --> 1("Auto Generate Random Number 1-100(G#)")
+    --> 1("Auto Generate Random Number 1-100 (G#)")
     --> 2("Ask User To Guess G#")
     --> 3("Compare User Number (U#) to G#") --> 5.1 & 5.2 & 5.3 & 4
     4("If U# Has A Syntax Error, Display Syntax Error Message") --> 2
