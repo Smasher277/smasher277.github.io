@@ -25,6 +25,6 @@ If not, then **5.1** displays a winning message if the computer reads that the u
 
 If it is *less* than the generated number, **5.2** will bring the user back to **2** where they will have to guess again.
 
-If it is *greater* than the generated number, **5.2** will bring the user back to **2** where they will have to guess again.
+If it is *greater* than the generated number, **5.3** will bring the user back to **2** where they will have to guess again.
 
 Once the correct guess is found, node "**End**" ends the game.
