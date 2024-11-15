@@ -50,6 +50,11 @@
                 color: #f0f0f0;
                 font-style: italic;
             }
+            #result2 {
+                margin-top: 20px;
+                font-size: 1.2em;
+                color: #f0f0f0;
+            }
             label {
                 display:block;
                 color: #f0f0f0;
@@ -77,8 +82,9 @@
             <input type="number" name="guess" id="guess">
             <button type="button" class="button" id="submit">Check Guess</button>
             <br>
-            <div name="result" id="result" aria-live="polite"></div>
-            <div name="result2" id="result2"></div>
+            <div name="result" id="result" aria-live="polite">Congratulations! You guessed correctly!</div>
+            <br>
+            <div name="result2" id="result2" aria-live="polite">Refresh the page to play again.</div>
         </form>
         <py-script>
             from pyscript import when
@@ -86,6 +92,7 @@
             def check_guess():
                 user_guess = int(Element("guess").value)
                 result = Element("result")
+                result2 = Element("result2")
                 if user_guess == selection:
                     result.write("Congratulations! You guessed correctly!")
                     result2.write("Refresh the page to play again.")
