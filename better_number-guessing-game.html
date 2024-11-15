@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- This HTML is currently not meant for my CTI 110 Lab. I was just messing around. -->
+<html>
+    <head>
+        <title>Number Guessing Game</title>
+        <link rel="stylesheet" href="https://pyscript.net/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <style>
+            script {
+                display: none;
+            }
+            py-script {
+                display: none;
+            }
+            py-config {
+                display: none;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #3d3d41;
+                text-align: center;
+                padding-top: 50px;
+                color: #f0f0f0;
+            }
+            input[type="number"] {
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid #a6a6ad;
+                border-radius: 5px;
+                width: 250px;
+                background-color: #a6a6ad;
+            }
+            .button {
+                border: none;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #b63232;
+                color: #fafafa;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .button:hover {
+                background-color: #0eac72;
+                color: #f0f0f0;
+            }
+            #result {
+                margin-top: 20px;
+                font-size: 1.25em;
+                color: #f0f0f0;
+                font-style: italic;
+            }
+            label {
+                display:block;
+                color: #f0f0f0;
+                font-weight: bold;
+                font-size: 1.174em;
+                padding-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <py-config>
+            packages = ['numpy']
+            [splashscreen]
+                enabled = false
+        </py-config>
+        <py-script>
+            import numpy as np
+            selection = np.random.randint(0,100,1)[0]
+        </py-script>
+        <br><br><br>
+        <h1>GUESS THE NUMBER!</h1>
+        <br><br><br><br>
+        <form>
+            <label for="guess">Enter A Number Between 1 And 100</label>
+            <input type="number" name="guess" id="guess">
+            <button type="button" class="button" id="submit">Check Guess</button>
+            <br>
+            <div name="result" id="result" aria-live="polite"></div>
+            <div name="result2" id="result2"></div>
+        </form>
+        <py-script>
+            from pyscript import when
+            @when("click", selector="#submit")
+            def check_guess():
+                user_guess = int(Element("guess").value)
+                result = Element("result")
+                if user_guess == selection:
+                    result.write("Congratulations! You guessed correctly!")
+                    result2.write("Refresh the page to play again.")
+                elif user_guess > selection:
+                    result.write("Try again! Your guess was too high.")
+                else:
+                    result.write("Try again! Your guess was too low.")
+        </py-script>
+    </body>
+</html>
