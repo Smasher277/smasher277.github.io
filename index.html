@@ -50,6 +50,7 @@
 
         .repo-item {
             display: block;
+            position: relative;
             white-space: nowrap;
             text-align: center;
             background-color: #1e1e1e;
@@ -73,6 +74,28 @@
         a:hover {
             color: #aa7cf5;
         }
+        
+        .repo-item::after {
+            content: attr(data-tooltip); /* Use the custom tooltip text */
+            position: absolute;
+            left: 50%;
+            bottom: 120%; /* Position above the element */
+            transform: translateX(-50%);
+            background-color: #333333;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+        .repo-item:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
 
         footer {
             margin-top: 50px;
@@ -90,17 +113,17 @@
 
     <main>
         <ul class="repo-list">
-            <li class="repo-item">
+            <li class="repo-item" data-tooltip="For CTI - 110">
                 <a href="https://smasher277.github.io/CTI-110_index.html" target="_blank">
-                    CTI - 110 index.html
+                    simple index.html
                 </a>
             </li>
-            <li class="repo-item">
+            <li class="repo-item" data-tooltip="Have fun!">
                 <a href="https://smasher277.github.io/smashers_number-guessing-game.html" target="_blank">
                     Python Number Guessing Game
                 </a>
             </li>
-            <li class="repo-item">
+            <li class="repo-item" data-tooltip="🤔">
                 <a href="https://smasher277.github.io/" target="_blank">
                     Coming Soon
                 </a>
