@@ -1,27 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            My Personal Introduction
-        </title>
-        <style>
-            body {
-                background-color: #202020;
-            }
-            h1 {
-                color: #B291F7;
-            }
-            p {
-                color: #e0e0e0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>My name is Josef Cordaro</h1>
-        <p>
-            I am a student at Wake Tech.
-            <br>I enjoy writing poetry and fiction, playing video games, and learning to code.
-            <br>I am currently reading a novel called The Visitors, by Clifford D. Simak. Chapter one was pretty interesting. 👌
-        </p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josef Cordaro's Git Repo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 400;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-weight: 550;
+            font-size: 2.5em;
+            color: #dbdbdb;
+        }
+
+        h2 {
+            font-weight: 450;
+            font-size: 1.5em;
+            color: #aa7cf5;
+        }
+
+        p {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        .repo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .repo-item {
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+            background-color: #1e1e1e;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .repo-item:hover {
+            transform: scale(1.05);
+            background-color: #333333;
+        }
+
+        a {
+            color: #dbdbdb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #aa7cf5;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Website For My Stuff</h1>
+        <h2>By Josef Cordaro</h2>
+        <p>Welcome! Check out my projects below.</p>
+    </header>
+
+    <main>
+        <ul class="repo-list">
+            <li class="repo-item">
+                <a href="https://github.com/yourusername/CTI-110_index.html" target="_blank">
+                    CTI - 110 index.html
+                </a>
+            </li>
+            <li class="repo-item">
+                <a href="https://smasher277.github.io/smashers_number-guessing-game.html" target="_blank">
+                    Python Number Guessing Game
+                </a>
+            </li>
+            <li class="repo-item">
+                <a href="https://smasher277.github.io/" target="_blank">
+                    Coming Soon
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <!-- <p style="font-size:1em">Made by Josef Cordaro and ChatGPT</p> -->
+    </footer>
+</body>
 </html>
